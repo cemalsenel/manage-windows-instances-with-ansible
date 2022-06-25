@@ -1,0 +1,17 @@
+windows_servers:
+  hosts:
+    <private-ip-windows-server>
+
+  vars:
+    ansible_connection: winrm
+    ansible_winrm_server_cert_validation: ignore
+    ansible_user: Administrator
+    ansible_password: <windows-server-password>
+
+linux_servers:
+  hosts:
+    <private-ip-linux-server>
+
+  vars:
+    ansible_ssh_private_key_file: ~/<pem-file>.pem
+    ansible_user: ec2-user
