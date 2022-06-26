@@ -1,0 +1,3 @@
+# We can get Vault password in this file by describing its path into "ansible.cfg" file. So Ansible will get vault password by itself.
+# "vault_password_file= open_vault.txt" ==> We will add this line in "ansible.cfg" file
+123

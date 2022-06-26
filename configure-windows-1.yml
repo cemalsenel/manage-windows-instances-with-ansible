@@ -1,0 +1,15 @@
+- name: windows server configuration
+  hosts: windows_servers
+  tasks:  
+    - name: Set timezone to 'Romance Standard Time' (GMT+01:00)
+      win_timezone:
+        timezone: Romance Standard Time
+
+    - name: Change the hostname to webserver-2
+      win_hostname:
+        name: windows-hostname
+      register: res
+
+    - name: Reboot
+      win_reboot:
+      when: res.reboot_required

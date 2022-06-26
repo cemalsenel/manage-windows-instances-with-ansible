@@ -1,0 +1,3 @@
+# In my case, name of my managed-windows-servers is "windows_servers.yml". We have to create "windows_servers.yml" file with Ansible-Vault. We will pass out a password for Vault in this step.
+# "ansible-vault create windows_servers.yml"  ==> We will run this command under "group_vars" folder. This command will create "windows_servers.yml" file under "group_vars" folder. And we will paste "ansible_user" and "ansible_password" in the file which is just created by Vault. This file will be encrypted. 
+# "ansible-playbook configure-windows.yml --ask-vault-pass" ==> this command will run our playbook and it will get "ansible_user" and "ansible_password" from "windows_servers.yml" file. 
